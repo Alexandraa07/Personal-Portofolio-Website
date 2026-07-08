@@ -1,18 +1,25 @@
 body {
-    background-image: url("../images/background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
+    font-family: verdana
+}
 
-    font-family: 'Poppins', sans-serif;
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 h1 {
-    font-family: 'Archivo Black', sans-serif;
+    font-family: verdana;
     font-size: 60px;
     color: #ffffff;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 15%;
     animation: fadeInDown 1s ease-out;
 }
 
@@ -21,6 +28,7 @@ h1 {
         opacity: 0;
         transform: translateY(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -28,31 +36,70 @@ h1 {
 }
 
 h2 {
-    color: #ffffff;
-    font-size: 30px;
-    text-align: center;
+    text-transform: uppercase;
+    font-family: Verdana, sans-serif;
+    display: flex;
+    gap: 10px;
+    padding: 10px 10%;
+    font-weight: 700;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+        1px 18px 6px rgba(16, 16, 16, 0.4),
+        1px 22px 10px rgba(16, 16, 16, 0.2),
+        1px 25px 35px rgba(16, 16, 16, 0.2),
+        1px 30px 60px rgba(16, 16, 16, 0.4);
 }
 
-ul {
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    z-index: 10;
+}
+
+.navbar .logo {
+    font-family: Verdana, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: #f5f5f5;
+}
+
+.navbar ul {
     list-style: none;
+    display: flex;
+    gap: 30px;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    background-color: #22a4db;
 }
 
-ul li a {
-    display: block;
-    padding: 14px 16px;
+.navbar ul li a {
     color: white;
     text-decoration: none;
+    position: relative;
+    transition: all 0.5s;
+    padding: 6px 4px;
 }
 
-ul li a:hover {
-    background-color: #000000;
-    border-radius: 6px;
+.navbar ul li a:hover {
+    color: #0D7CFF;
+    text-shadow: 0 0 10px #0D7CFF, 0 0 20px #0D7CFF, 0 0 30px #0D7CFF, 0 0 40px #0D7CFF;
 }
 
 footer {
@@ -63,10 +110,11 @@ footer {
 p {
     font-size: 20px;
     text-align: center;
+    color: white;
 }
 
 .card {
-    background-color: #fefefe;
+    backdrop-filter: blur(10px);
     max-width: 800px;
     margin: 40px auto;
     padding: 40px;
