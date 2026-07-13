@@ -2,47 +2,58 @@
 <html lang="en">
 
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@300;400;600&display=swap"
-        rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="home">
     <video autoplay muted loop id="bg-video">
         <source src="video/video.mp4" type="video/mp4">
     </video>
 
-    <h1>Personal <br>
-        Portofolio</h1>
+    <section class="hero">
+        <div class="hero-left">
+            <span class="hello">
+                Hello , I'm
+            </span>
 
-    <h2>Asultanei Elena-Alexandra</h2>
+            <h1>
+                Elena-Alexandra <br> Asultanei
+            </h1>
 
-    <nav class="navbar">
-        <div class="logo">MENU</div>
-        <ul>
-            <li><a href="index.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="certificates.html">Certificates</a></li>
-            <li><a href="hobbies.html">Hobbies</a></li>
-        </ul>
-    </nav>
+            <p>
+                3rd-year student<br>
+                Faculty of Automatic Control and Computer Engineering <br>
+                Gheorghe Asachi Technical University of Iași
+            </p>
 
-    <div class="card">
-        <p>
-            Third-year student <br>
-            Faculty of Automatic Control and Computer Engineering <br>
-            Gheorghe Asachi Technical University of Iași
-        </p>
-    </div>
+            <div class="buttons">
+                <a href="projects.html" class="btn">
+                    Projects
+                </a>
+                <a href="certificates.html" class="btn">
+                   Certificates
+                </a>
+                <a href="#contact" class="btn">
+                    Contact
+                </a>
+            </div>
+        </div>
 
-    <footer>
-        <p><b>Contact</b>: 0744810515 <b>Email</b>: alexandraelen.7@gmail.com</p>
-    </footer>
+        <div class="hero-right">
+            <div class="photo-ring">
+                <div class="photo">
+                    <img src="images/eu.jpg" alt="Me">
+                </div>
+            </div>
+        </div>
+
+    </section>
 
 </body>
 
