@@ -7,30 +7,22 @@
 body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
-}
-
-#bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
+    background: #0b1230;
 }
 
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, .45);
+    background: rgba(5, 10, 40, .65);
     z-index: -1;
 }
 
 .home .hero {
     width: 85%;
-    max-width: 1250px;
-    margin: 120px auto 60px;
+    max-width: 1400px;
+    max-height: 1000px;
+    margin: 100px auto;
     padding: 70px;
     border-radius: 35px;
     display: flex;
@@ -38,9 +30,10 @@ body::before {
     align-items: center;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(130deg, rgba(5, 12, 45, .85), rgba(25, 40, 95, .85));
+    background:
+        linear-gradient(130deg, rgba(5, 12, 45, .9), rgba(25, 40, 95, .85));
     backdrop-filter: blur(20px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .45);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .5), 0 0 80px rgba(13, 124, 255, .25);
 }
 
 .home .hero::before {
@@ -51,7 +44,7 @@ body::before {
     background: #7c3cff;
     filter: blur(130px);
     opacity: .35;
-    left: 200px;
+    left: 100px;
     bottom: -150px;
 }
 
@@ -67,27 +60,28 @@ body::before {
     right: -100px;
 }
 
-.home .hero-left {
+.hero-left {
     position: relative;
     z-index: 2;
 }
 
-.home .hello {
+.hello {
     color: #75a9ff;
-    letter-spacing: 5px;
+    letter-spacing: 6px;
     font-size: 18px;
 }
 
-.home .hero-left h1 {
+.hero-left h1 {
     margin-top: 25px;
-    font-size: 70px;
+    font-size: 60px;
     line-height: 1.05;
     color: white;
+    letter-spacing: -1px;
 }
 
-.home .hero-left p {
+.hero-left p {
     margin-top: 30px;
-    font-size: 26px;
+    font-size: 24px;
     color: #b7c8ee;
     line-height: 1.5;
 }
@@ -103,14 +97,16 @@ body::before {
     color: white;
     padding: 15px 35px;
     border-radius: 50px;
-    border: 1px solid rgba(255, 255, 255, .25);
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .3);
+    backdrop-filter: blur(10px);
     transition: .35s;
 }
-
 
 .btn:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 20px #216cff;
+    background: rgba(13, 124, 255, .2);
 }
 
 .hero-right {
@@ -122,10 +118,10 @@ body::before {
     width: 280px;
     height: 280px;
     border-radius: 50%;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .photo-ring::before {
@@ -134,21 +130,18 @@ body::before {
     inset: 0;
     border-radius: 50%;
     background:
-        conic-gradient(#0D7CFF, #6d45ff, #0D7CFF);
+        conic-gradient(#0D7CFF, #7c3cff, #0D7CFF);
     animation: spin 4s linear infinite;
 }
 
 .photo {
-    width: 248px;
-    height: 248px;
+    width: 245px;
+    height: 245px;
     border-radius: 50%;
     overflow: hidden;
     background: #1b2453;
     position: relative;
     z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .photo img {
@@ -156,7 +149,6 @@ body::before {
     height: 100%;
     object-fit: cover;
 }
-
 
 @keyframes spin {
     from {
@@ -166,30 +158,197 @@ body::before {
     to {
         transform: rotate(360deg);
     }
+
+}
+
+.certificates-page {
+    width: 85%;
+    max-width: 1250px;
+    margin: 120px auto;
+    padding: 50px;
+    border-radius: 35px;
+    background: linear-gradient(130deg, rgba(5, 12, 45, .9), rgba(25, 40, 95, .85));
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .45);
+}
+
+.certificates h1 {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10px;
+    padding: 15px 35px;
+    background: rgba(255, 255, 255, .05);
+    backdrop-filter: blur(10px);
+}
+
+.certificate-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.certificate-card {
+    background:rgba(255, 255, 255, .08);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+    transition: .3s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px #0D7CFF;
+}
+
+.certificate-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    background: white;
+}
+
+.certificate-card h3 {
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    margin: 20px;
+}
+
+.certificate-card p {
+    color: #b7c8ee;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 20px;
 }
 
 @media(max-width:950px) {
-
-    .hero {
+    .home .hero {
+        width: 90%;
         flex-direction: column-reverse;
         text-align: center;
-        padding: 50px 30px;
+        padding: 40px 25px;
     }
 
     .hero-left h1 {
-        font-size: 48px;
+        font-size: 45px;
+
     }
 
     .hero-left p {
         font-size: 20px;
+
     }
 
     .buttons {
         justify-content: center;
+
     }
 
     .photo-ring {
         margin-bottom: 40px;
+
+    }
+
+
+
+    .certificate-container {
+        grid-template-columns: 1fr;
+
+    }
+
+    .certificates-page {
+        width: 90%;
+        padding: 30px;
+
+    }
+
+    .certificates-page h1 {
+        font-size: 40px;
+
     }
 
 }
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 10, 40, .92);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 15px;
+    box-shadow: 0 0 60px rgba(13, 124, 255, .4);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    color: white;
+    font-size: 45px;
+    transition: .3s;
+}
+
+.lightbox-close:hover {
+    color: #0D7CFF;
+    transform: rotate(90deg);
+}
+
+.certificate-card img {
+    cursor: zoom-in;
+}
+
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
