@@ -413,3 +413,31 @@ body::before {
 .projects .btn {
     font-size: 25px;
 }
+
+
+/* Game Page */
+
+.game .hero {
+    width: 85%;
+    max-width: 1400px;
+    margin: 100px auto;
+    padding: 70px;
+    border-radius: 35px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(130deg, rgba(5, 12, 45, .9), rgba(25, 40, 95, .85));
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .5), 0 0 80px rgba(13, 124, 255, .25);
+}
+
+.game .hero-left h1 {
+    font-size: 45px;
+    line-height: 1.7;
+    color: #b7c8ee;
+}
+
+.game .hero-left p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #b7c8ee;
+}
