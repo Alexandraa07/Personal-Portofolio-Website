@@ -417,7 +417,7 @@ body::before {
 
 /* Game Page */
 
-.game .hero {
+.java-game .hero {
     width: 85%;
     max-width: 1400px;
     margin: 100px auto;
@@ -430,14 +430,110 @@ body::before {
     box-shadow: 0 20px 40px rgba(0, 0, 0, .5), 0 0 80px rgba(13, 124, 255, .25);
 }
 
-.game .hero-left h1 {
+.java-game .hero-left h1 {
     font-size: 45px;
     line-height: 1.7;
     color: #b7c8ee;
 }
 
-.game .hero-left p {
+.java-game .hero-left p {
     font-size: 18px;
     line-height: 1.7;
     color: #b7c8ee;
+}
+
+.gallery-section{
+    width: 85%;
+    margin: 60px auto 100px;
+}
+
+.gallery-grid{
+    display:flex;
+    justify-content:center;
+}
+
+.card{
+    width:100%;
+    max-width:900px;
+
+    background: linear-gradient(130deg,
+        rgba(5,12,45,.9),
+        rgba(25,40,95,.85));
+
+    border-radius:30px;
+    padding:30px;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.5),
+        0 0 50px rgba(13,124,255,.2);
+}
+
+.card img{
+    width:100%;
+    display:block;
+    border-radius:20px;
+}
+
+
+.technologies{
+    width:85%;
+    margin:80px auto;
+}
+
+.technologies h2{
+    color:white;
+    font-size:40px;
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.slider{
+    overflow:hidden;
+    width:100%;
+}
+
+.slide-track{
+    display:flex;
+    gap:20px;
+    width:max-content;
+    animation:scroll 25s linear infinite;
+}
+
+.tech{
+    min-width:200px;
+    height:90px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+    font-size:20px;
+    font-weight:600;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    transition:.3s;
+}
+
+.tech:hover{
+    transform:translateY(-6px);
+    background:rgba(13,124,255,.15);
+    border-color:#0D7CFF;
+    box-shadow:0 0 20px rgba(13,124,255,.4);
+}
+
+@keyframes scroll{
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
 }
